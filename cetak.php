@@ -16,17 +16,19 @@ $hasilAsli = $_SESSION["hasil"];
   
   <table border="1px">
     <thead>
-      <th>NM_KECAMATAN  </th>
-      <th>NM_KELURAHAN  </th>
-      <th>THN_PELAYANAN </th>
-      <th>BUNDEL_PELAYANAN  </th>
-      <th>NO_URUT_PELAYANAN </th>
-      <th>TGL_SELESAI </th>
-      <th>TGL_PENYERAHAN  </th>
+      <th>KECAMATAN  </th>
+      <th>KELURAHAN  </th>
+      <th>THN </th>
+      <th>BUNDEL  </th>
+      <th>NO URUT </th>
+      <th>TGL SELESAI </th>
+      <th>TGL PENYERAHAN  </th>
       <th>OP_BARU </th>
       <th>BETUL </th>
       <th>BATAL </th>
       <th>JUMLAH  <th>
+      <th>TGL_SERAH  <th>
+      <th>TGL_SERAH  <th>
     </thead>
     <tbody>
     <?php
@@ -36,15 +38,17 @@ $hasilAsli = $_SESSION["hasil"];
       <tr>
         <td style="text-align: center"><?= $value["NM_KECAMATAN"] ?>  </td>
         <td style="text-align: center"><?= $value["NM_KELURAHAN"] ?>  </td>
-        <td style="text-align: center"><?= $value["THN_PELAYANAN"] ?> </td>
-        <td style="text-align: center"><?= $value["BUNDEL_PELAYANAN"] ?>  </td>
-        <td style="text-align: center"><?= $value["NO_URUT_PELAYANAN"] ?> </td>
+        <td style="text-align: center"><?= $value["THN_PELAYANAN"] ?>  </td>
+        <td style="text-align: center"><?= str_pad($value["BUNDEL_PELAYANAN"], 4, 0, STR_PAD_LEFT) ?> </td>
+        <td style="text-align: center"><?= str_pad($value["NO_URUT_PELAYANAN"], 3, 0, STR_PAD_LEFT) ?> </td>
         <td style="text-align: center"><?= $value["TGL_SELESAI"] ?> </td>
         <td style="text-align: center"><?= $value["TGL_PENYERAHAN"] ?>  </td>
         <td style="text-align: center"><?= $value["OP_BARU"] ?> </td>
         <td style="text-align: center"><?= $value["BETUL"] ?> </td>
         <td style="text-align: center"><?= $value["BATAL"] ?> </td>
         <td style="text-align: center"><?= $value["JUMLAH"] ?>  <td>
+        <td style="text-align: center">  <td>
+        <td style="text-align: center">  <td>
       </tr>
 
     <?php
